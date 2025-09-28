@@ -1,0 +1,18 @@
+<div *ngIf="trainingType" class="alert alert-info mb-3">
+  <strong>Selected training type:</strong> {{ trainingType }}
+</div>
+
+<app-training-session-form (formSubmit)="handleFormSubmit($event)" />
+
+<div *ngIf="submittedExercises.length > 0" class="mt-4">
+  <h5>Submitted Exercises:</h5>
+  <ul>
+    <li *ngFor="let ex of submittedExercises; let i = index">
+      <strong>Exercise {{ i + 1 }}:</strong><br />
+      Type: {{ ex.exerciseType }}<br />
+      Weight: {{ ex.weight }}<br />
+      Reps: {{ ex.reps }}<br />
+      Series: {{ ex.series }}
+    </li>
+  </ul>
+</div>
