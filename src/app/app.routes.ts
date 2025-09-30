@@ -2,10 +2,17 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'new-training-session',
+    path: '',
     loadComponent: () =>
       import('./components/main-page/main-page.component').then(
         (m) => m.MainPageComponent
-      ), // Placeholder, replace with your target component
+      ),
+  },
+  {
+    path: 'new-training-session',
+    loadComponent: () =>
+      import('./components/training-session/training-session.component').then(
+        (m) => m.TrainingSessionComponent
+      ),
   },
 ];
