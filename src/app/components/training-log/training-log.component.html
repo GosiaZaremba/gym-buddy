@@ -1,0 +1,22 @@
+<div class="container">
+  <h4 class="my-4 text-center">Your training log</h4>
+  <div *ngIf="exerciseLog.length > 0; else noLog">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-2">
+      <div class="col" *ngFor="let training of exerciseLog; let i = index">
+        <div class="card h-100 p-4">
+          <h5 class="card-title">{{ training.exerciseCategory }}</h5>
+          <p>{{ training.date | date : "dd.MM.yyyy HH:mm" }}</p>
+          <p *ngFor="let exercise of training.exercises">
+            {{ exercise.name }}
+            min: {{ exercise.minWeight }} kg, max: {{ exercise.maxWeight }} kg
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #noLog>
+    <div class="alert alert-success text-center mt-4">
+      No training log data to display yet. Start a session to see your log here!
+    </div>
+  </ng-template>
+</div>

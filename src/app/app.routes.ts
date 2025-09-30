@@ -15,4 +15,11 @@ export const routes: Routes = [
         (m) => m.TrainingSessionComponent
       ),
   },
+  {
+    path: 'training-log',
+    loadComponent: () =>
+      import('./components/training-log/training-log.component').then(
+        (m) => m.TrainingLogComponent
+      ),
+  },
 ];
