@@ -1,18 +1,40 @@
-<div *ngIf="trainingType" class="alert alert-info mb-3">
+<div *ngIf="trainingType" class="alert alert-success mb-3">
   <strong>Selected training type:</strong> {{ trainingType }}
 </div>
 
-<app-training-session-form (formSubmit)="handleFormSubmit($event)" />
-
-<div *ngIf="submittedExercises.length > 0" class="mt-4">
-  <h5>Submitted Exercises:</h5>
-  <ul>
-    <li *ngFor="let ex of submittedExercises; let i = index">
-      <strong>Exercise {{ i + 1 }}:</strong><br />
-      Type: {{ ex.exerciseType }}<br />
-      Weight: {{ ex.weight }}<br />
-      Reps: {{ ex.reps }}<br />
-      Series: {{ ex.series }}
-    </li>
-  </ul>
+<div *ngIf="filteredExercises.length > 0" class="mb-4">
+  <h5>Exercises for {{ trainingType }}:</h5>
+  <form [formGroup]="checkboxForm" (ngSubmit)="onSubmitCheckboxForm()">
+    <div formArrayName="done">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Status</th>
+            <th>Name</th>
+            <th>Min Weight</th>
+            <th>Max Weight</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ex of filteredExercises; let i = index">
+            <td>
+              <input
+                type="checkbox"
+                class="btn-check"
+                id="btncheck{{ i }}"
+                [formControlName]="i"
+              />
+              <label class="btn btn-outline-success" for="btncheck{{ i }}"
+                >Done</label
+              >
+            </td>
+            <td>{{ ex.name }}</td>
+            <td>{{ ex.minWeight }}</td>
+            <td>{{ ex.maxWeight }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+  </form>
 </div>

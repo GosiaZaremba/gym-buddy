@@ -1,0 +1,185 @@
+[
+  {
+    "category": "chest and biceps",
+    "name": "Dumbbell Bench Press",
+    "minWeight": 4,
+    "maxWeight": 9
+  },
+  {
+    "category": "chest and biceps",
+    "name": "Dumbbell Fly (Flat Bench)",
+    "minWeight": 4,
+    "maxWeight": 7.5
+  },
+  {
+    "category": "chest and biceps",
+    "name": "Dumbbell Incline Press",
+    "minWeight": 4,
+    "maxWeight": 9
+  },
+  {
+    "category": "chest and biceps",
+    "name": "Smith Machine Bench Press",
+    "minWeight": 5,
+    "maxWeight": 10
+  },
+  {
+    "category": "chest and biceps",
+    "name": "Pec Deck (Machine)",
+    "minWeight": 1,
+    "maxWeight": 4
+  },
+  {
+    "category": "chest and biceps",
+    "name": "Incline Dumbbell Curl",
+    "minWeight": 7.5,
+    "maxWeight": 7.5
+  },
+  {
+    "category": "chest and biceps",
+    "name": "EZ Bar Preacher Curl",
+    "minWeight": 1.25,
+    "maxWeight": 5
+  },
+  {
+    "category": "chest and biceps",
+    "name": "Cable Rope Curl",
+    "minWeight": 1,
+    "maxWeight": 4
+  },
+
+  {
+    "category": "back",
+    "name": "Barbell Row",
+    "minWeight": 1.25,
+    "maxWeight": 4
+  },
+  {
+    "category": "back",
+    "name": "Deadlift",
+    "minWeight": 1,
+    "maxWeight": 4
+  },
+  {
+    "category": "back",
+    "name": "Barbell Shrugs",
+    "minWeight": 2.5,
+    "maxWeight": 3.75
+  },
+  {
+    "category": "back",
+    "name": "Seated Row (Machine)",
+    "minWeight": 1,
+    "maxWeight": 4
+  },
+  {
+    "category": "back",
+    "name": "Lat Pulldown (Machine)",
+    "minWeight": 1,
+    "maxWeight": 4
+  },
+  {
+    "category": "back",
+    "name": "One-Arm Dumbbell Row",
+    "minWeight": 9,
+    "maxWeight": 9
+  },
+  {
+    "category": "back",
+    "name": "Iso-Lateral Row (Machine)",
+    "minWeight": 15,
+    "maxWeight": 15
+  },
+
+  {
+    "category": "legs",
+    "name": "Barbell Back Squat",
+    "minWeight": 2.5,
+    "maxWeight": 6.25
+  },
+  {
+    "category": "legs",
+    "name": "Barbell Front Squat",
+    "minWeight": 1.25,
+    "maxWeight": 1.25
+  },
+  {
+    "category": "legs",
+    "name": "Barbell Hack Squat",
+    "minWeight": 1.25,
+    "maxWeight": 1.25
+  },
+  {
+    "category": "legs",
+    "name": "Leg Press (Machine)",
+    "minWeight": 5,
+    "maxWeight": 15
+  },
+  {
+    "category": "legs",
+    "name": "Leg Extension (Machine)",
+    "minWeight": 1,
+    "maxWeight": 4
+  },
+  {
+    "category": "legs",
+    "name": "Leg Curl (Machine)",
+    "minWeight": 1,
+    "maxWeight": 4
+  },
+  {
+    "category": "legs",
+    "name": "Seated Calf Raise (Machine)",
+    "minWeight": 5,
+    "maxWeight": 10
+  },
+
+  {
+    "category": "shoulders and triceps",
+    "name": "Dumbbell Shoulder Press",
+    "minWeight": 1,
+    "maxWeight": 4
+  },
+  {
+    "category": "shoulders and triceps",
+    "name": "Arnold Press",
+    "minWeight": 1,
+    "maxWeight": 4
+  },
+  {
+    "category": "shoulders and triceps",
+    "name": "Dumbbell Overhead Extension (One Arm)",
+    "minWeight": 3,
+    "maxWeight": 5
+  },
+  {
+    "category": "shoulders and triceps",
+    "name": "Dumbbell Overhead Extension (Two Hands)",
+    "minWeight": 8,
+    "maxWeight": 9
+  },
+  {
+    "category": "shoulders and triceps",
+    "name": "Cable Triceps Pushdown",
+    "minWeight": 1,
+    "maxWeight": 4
+  },
+  {
+    "category": "shoulders and triceps",
+    "name": "Smith Machine Shoulder Press (Seated)",
+    "minWeight": 5,
+    "maxWeight": 5
+  },
+  {
+    "category": "shoulders and triceps",
+    "name": "Smith Machine Behind-the-Neck Press",
+    "minWeight": 0,
+    "maxWeight": 5
+  },
+  {
+    "category": "shoulders and triceps",
+    "name": "Shoulder Press (Machine)",
+    "minWeight": 1,
+    "maxWeight": 4
+  }
+]

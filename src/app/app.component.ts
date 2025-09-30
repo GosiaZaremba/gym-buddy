@@ -5,7 +5,7 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MainPageComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.sass',
 })
