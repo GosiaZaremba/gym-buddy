@@ -68,12 +68,13 @@ export class TrainingSessionComponent implements OnInit {
 
   onSubmitCheckboxForm() {
     const doneArray = this.checkboxForm.value.done;
-    const now = new Date().toISOString();
+    const excDate = new Date().toISOString();
     const completedExercises = this.filteredExercises
       .map((ex, i) => (doneArray[i] ? ex : null))
       .filter((ex): ex is Exercise => !!ex);
     const logGroup: ExerciseLogGroup = {
-      date: now,
+      date: excDate,
+      exerciseCategory: this.trainingType ?? 'General',
       exercises: completedExercises.map((ex) => ({
         name: ex.name,
         minWeight: ex.minWeight,
