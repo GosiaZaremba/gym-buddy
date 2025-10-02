@@ -1,27 +1,41 @@
-# GymBuddy
+# Gym-Buddy
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+A simple application to log Your gym workouts!
+Allows to add and view training session in a clean and intuitive interface.
 
-## Development server
+## Preview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![Gym-Buddy Preview](src/assets/img/gym-buddy.gif)
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Add a new workout session with date and exercise type
+- View a list od saved workouts
+- Suble row highlighting on table rows
+- Responsive designt using Bootstrap
 
-## Build
+## Technologies
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Framework:** Angular
+- **Styling:** Bootstrap + Sass
 
-## Running unit tests
+## Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository:
 
-## Running end-to-end tests
+```bash
+git clone https://github.com/GosiaZaremba/gym-buddy
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Install dependencies
 
-## Further help
+```bash
+cd gym-buddy
+npm install
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. Run the application in development mode
+
+```bash
+ng serve
+```
