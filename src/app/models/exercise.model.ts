@@ -9,5 +9,5 @@ export interface Exercise {
   name: string;
   minWeight: number;
   maxWeight: number;
-  machineLevelRange?: string; // np. "1–4"
+  machineLevelRange?: string;
 }

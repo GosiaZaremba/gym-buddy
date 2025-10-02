@@ -20,7 +20,6 @@ export class TrainingLogComponent implements OnInit {
   logExerciseLog() {
     this.exerciseLogService.getLog().subscribe((log) => {
       this.exerciseLog = log;
-      console.log(this.exerciseLog[0].exercises);
     });
   }
 }

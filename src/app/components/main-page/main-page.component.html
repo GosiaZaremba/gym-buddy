@@ -1,22 +1,27 @@
-<div>
+<div class="container">
   <div class="text-center my-5">
-    <p class="lead">What would You like to train today?</p>
+    <h1 class="h2 text-success mb-3">
+      Track Your Workouts. Smash Goals. Gym-Buddy.
+    </h1>
+    <h2 class="h3 fw-semibold text-secondary mb-4">
+      What do You want to train today?
+    </h2>
   </div>
   <div class="container d-flex justify-content-evenly flex-wrap">
     <button
-      class="btn btn-outline-success"
+      class="btn btn-outline-success my-2"
       (click)="goToTraining('chest and biceps')"
     >
       Chest and biceps
     </button>
-    <button class="btn btn-outline-success" (click)="goToTraining('back')">
+    <button class="btn btn-outline-success my-2" (click)="goToTraining('back')">
       Back
     </button>
-    <button class="btn btn-outline-success" (click)="goToTraining('legs')">
+    <button class="btn btn-outline-success my-2" (click)="goToTraining('legs')">
       Legs
     </button>
     <button
-      class="btn btn-outline-success"
+      class="btn btn-outline-success my-2"
       (click)="goToTraining('shoulders and triceps')"
     >
       Soulders and triceps
