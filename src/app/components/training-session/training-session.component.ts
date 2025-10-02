@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalComponent } from '../modal/modal.component';
 import { CommonModule } from '@angular/common';
 import { Exercise } from '../../models/exercise.model';
 import { ExerciseLogGroup } from '../../models/exercise-log-group.model';
@@ -14,7 +15,7 @@ import {
 @Component({
   selector: 'app-training-session',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, ModalComponent],
   templateUrl: './training-session.component.html',
   styleUrl: './training-session.component.sass',
 })
@@ -24,6 +25,8 @@ export class TrainingSessionComponent implements OnInit {
   allExercises: Exercise[] = [];
   filteredExercises: Exercise[] = [];
   checkboxForm: FormGroup;
+  showModal = false;
+  modalMessage = '';
 
   constructor(
     private exerciseService: ExerciseService,
@@ -83,16 +86,32 @@ export class TrainingSessionComponent implements OnInit {
     };
     this.exerciseLogService.logExercises(logGroup).subscribe((success) => {
       if (success) {
-        alert(
-          'Exercises sent to log!\n' +
-            logGroup.exercises
-              .map((e) => `${e.name} (${logGroup.date})`)
-              .join(', ')
-        );
-        console.log(logGroup);
+        this.openModal('Your training session is locked in – great job!');
       } else {
-        alert('Failed to log exercises.');
+        this.openModal('Failed to log exercises.');
       }
     });
+  }
+
+  openModal(message: string) {
+    this.modalMessage = message;
+    this.showModal = true;
+    setTimeout(() => {
+      const modalEl = document.getElementById('staticBackdrop');
+      if (modalEl) {
+        // @ts-ignore
+        const modal = new window.bootstrap.Modal(modalEl);
+        modal.show();
+      }
+    }, 0);
+  }
+
+  closeModal() {
+    this.showModal = false;
+  }
+
+  get isAnyExerciseDone(): boolean {
+    const doneArray = this.checkboxForm.get('done')?.value;
+    return Array.isArray(doneArray) && doneArray.some((v) => v);
   }
 }
